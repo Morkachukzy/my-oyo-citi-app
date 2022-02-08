@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<ion-card (click)="goToPollPage()" class="poll">
+  <ion-card-header>
+    <ion-card-title>Participate in Poll</ion-card-title>
+    <ion-icon name="analytics-outline"></ion-icon>
+  </ion-card-header>
+  <div class="content">
+    <ion-card-title class="poll-question">{{ pollQuestion }}</ion-card-title>
+    <div class="poll-answers">
+      <div class="positiveBar answer">
+        <p>{{ displayPositiveRemark }}</p>
+        <div class="w3-light-grey pollBar-wrapper">
+          <div id="positiveBar" class=" pollBar positive" style="width:1%"></div>
+        </div>
+      </div>
+      <div class="negativeBar answer">
+        <p> {{ displayNegativeRemark }}</p>
+        <div class="w3-light-grey pollBar-wrapper">
+          <div id="negativeBar" class=" pollBar negative" style="width:1%"></div>
+        </div>
+      </div>
+    </div>
+    <ion-card-subtitle><span>{{ totalParticipants }} people already participated. </span> Touch to participate!</ion-card-subtitle>
+  </div>
+
+</ion-card>

@@ -1,0 +1,7 @@
+{
+  "name": "MyOyoApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

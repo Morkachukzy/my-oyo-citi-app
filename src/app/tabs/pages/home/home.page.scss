@@ -1,0 +1,98 @@
+@import "scss/components/angular-material-components/am-input";
+
+$background: white;
+$secondary: #3dc2ff;
+$primary: #3880ff;
+$boxShadow: rgb(0 0 0 / 20%) 0px 0px 10px -5px; //TODO- remove and globally theme
+
+ion-avatar {
+  border: 1px solid black;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+ion-content {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+$primary: var(--primary-color);
+$secondary: var(--secondary-color);
+ion-content, ion-header, ion-tabs {
+  //--ion-background-color: white; //TODO: ion-background-color
+}
+
+ion-card {
+  box-shadow: $boxShadow;
+  border-radius: 20px;
+
+}
+
+ion-row {
+  margin: 2em;
+
+  .quickAction {
+	width: 25%;
+	display: flex !important;
+	align-items: center !important;
+	flex-direction: column !important;
+	box-shadow: none;
+  }
+}
+
+.slider {
+  //padding: 0 1em;
+  box-shadow: none;
+
+  --ion-background-color: transparent;
+}
+
+.statistics {
+  //border: 1px solid green;
+  //display: flex;
+  //flex-direction: column;
+  //width: 100%;
+  //width: 90%;
+  //margin: 1em;
+
+}
+
+.statistics-card {
+  //width: 20%;
+  //border: 1px solid blue;
+  //width: 100%;
+  display: block;
+  //width: 100%;
+
+
+}
+
+
+$breakpoint-tablet-sm: 658px;
+$breakpoint-tablet-md: 768px;
+@media (min-width: $breakpoint-tablet-sm) {
+  .statistics-card {
+	//width: 20%;
+	//border: 1px solid blue;
+	width: 50%;
+	display: inline-block;
+	//width: 100%;
+
+
+  }
+}
+
+@media (min-width: $breakpoint-tablet-md) {
+  .poll-and-issues {
+	display: flex;
+	align-items: center;
+	app-participation-poll {
+	  width: 50%;
+	}
+
+	app-recent-issues {
+	  width: 50%;
+	}
+  }
+}

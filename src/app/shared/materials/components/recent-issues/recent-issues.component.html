@@ -1,0 +1,21 @@
+<ion-card class="recent">
+    <ion-card-header>
+        <ion-card-title>Recently Solved Issues</ion-card-title>
+        <!--        <ion-icon name="checkmark-done-outline"></ion-icon>-->
+        <ion-icon name="thumbs-up-outline"></ion-icon>
+    </ion-card-header>
+    <div class="content"  *ngFor="let solvedIssue of solvedIssues" >
+        <div  class="content-item" (click)="proceedTo(solvedIssue)">
+            <div class="content-icon">
+                <ion-icon name="checkmark-done-circle-outline" color="primary"></ion-icon>
+            </div>
+            <div class="content-text">
+                <ion-card-title>{{title(solvedIssue)}}</ion-card-title>
+                <ion-card-subtitle>{{ content(solvedIssue) }}
+                </ion-card-subtitle>
+                <ion-card-subtitle class="content-author">by <span>{{ author(solvedIssue) }}</span></ion-card-subtitle>
+            </div>
+        </div>
+    </div>
+
+</ion-card>

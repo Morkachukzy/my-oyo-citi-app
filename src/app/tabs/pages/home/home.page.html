@@ -1,0 +1,46 @@
+<ion-header collapse="fade" class="ion-no-border" [translucent]="false">
+    <ion-toolbar>
+        <ion-title>Welcome Chuka,</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+    <ion-item lines="none">
+        <!--    <ion-icon slot="start" name="moon"></ion-icon>-->
+        <ion-toggle (click)="toggleTheme()" id="theme-toggle" slot="end" color="primary"></ion-toggle>
+    </ion-item>
+    <!--  SEARCH BAR-->
+    <app-search-bar [darkMode]="darkMode" (searchEvent)="searchFor($event)"></app-search-bar>
+
+
+    <!--  QUICK ACTIONS-->
+    <ion-row>
+        <app-quick-action class="quickAction" *ngFor="let quickAction of quickActions"
+                          [quickAction]="quickAction"></app-quick-action>
+    </ion-row>
+
+    <!--  IMAGE SLIDER-->
+    <ion-card class="slider">
+        <app-image-slider [imageUrls]="sliderImagesUrls"></app-image-slider>
+    </ion-card>
+
+    <!--  STATISTICS-->
+    <div class="statistics">
+        <app-statistics-card class="statistics-card" *ngFor="let allocationStats of totalAllocationStats"
+                             [stat]="allocationStats"></app-statistics-card>
+    </div>
+
+    <!--  PARTICIPATION POLL & RECENTLY SOLVED ISSUES-->
+    <div class="poll-and-issues">
+        <app-participation-poll (click)="goToPollPage('poll')" class="participation-poll"
+                                [poll]="currentPoll"></app-participation-poll>
+
+        <app-recent-issues [solvedIssues]="recentlySolvedIssues"></app-recent-issues>
+
+    </div>
+
+    <!--  TRIVIA OF THE WEEK-->
+    <app-trivia [trivia]="trivia"></app-trivia>
+</ion-content>

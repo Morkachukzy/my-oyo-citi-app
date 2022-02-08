@@ -1,0 +1,13 @@
+<ion-card class="card">
+  <ion-card-title class="card-title">{{stat.title}} </ion-card-title>
+  <ion-card-content class='card-content'>
+    <ion-card-title>
+      {{stat.amount | currency: 'NGN'}}
+    </ion-card-title>
+    <ion-icon name="trending-up-outline"></ion-icon>
+  </ion-card-content>
+  <ng-content></ng-content>
+  <ion-card-subtitle class='card-subtitle'  (click)="proceedTo(stat.link.path)"><a>{{stat.link.name}}</a>
+    <ion-icon name="arrow-forward-outline"></ion-icon>
+  </ion-card-subtitle>
+</ion-card>

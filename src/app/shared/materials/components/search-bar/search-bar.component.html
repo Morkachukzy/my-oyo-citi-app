@@ -1,0 +1,7 @@
+<ion-item lines="none">
+  <mat-form-field [class]="[darkMode, 'search-bar']" appearance="fill" >
+    <ion-icon name="search-outline"></ion-icon>
+    <input matInput [class]="darkMode" (keydown.enter)="searchFor(searchValue)" [(ngModel)]="searchValue" placeholder="Search using CASE ID"  >
+    <ion-icon name="close-outline" *ngIf="searchValue" (click)="clearSearchValue()"></ion-icon>
+  </mat-form-field>
+</ion-item>

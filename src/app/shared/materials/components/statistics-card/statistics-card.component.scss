@@ -1,0 +1,88 @@
+$boxShadow: rgb(0 0 0 / 20%) 0px 0px 10px -5px; //TODO- remove and globally theme
+$breakpoint-sm-md: 390px;
+$breakpoint-v-sm: 365px;
+$breakpoint-md: 500px;
+$breakpoint-tablet: 658px;
+$breakpoint-tablet-lg: 890px;
+
+.card {
+  margin: 1.5em 2em;
+  font-size: 1em;
+  padding: 2em 1.4em;
+  //box-shadow: $boxShadow;
+  //rgb(0 0 0 / 14%) 0px 2px 2px 0px,
+  //rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+  //border-radius: 20px;
+  //border: 1px solid var(--ion-color-primary);
+
+  .card-title {
+	//border: 1px solid black;
+	font-size: .7em;
+	font-weight: normal;
+  }
+
+  .card-content {
+
+	padding-left: 0;
+	//color: black; //TODO: theming
+	display: flex;
+
+	ion-card-title {
+	  font-size: 1.7em;
+	  font-weight: 600;
+	}
+	@media (max-width: $breakpoint-v-sm) {
+	  ion-card-title {
+		font-size: 1.4em;
+	  }
+	}
+	ion-icon {
+	  align-self: start;
+	  font-size: .7em;
+	  color: var(--ion-color-success);
+	  --ionicon-stroke-width: 24px;
+	}
+  }
+
+  .card-subtitle {
+	font-size: .6em;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	color: var(--ion-color-primary);
+
+	ion-icon {
+
+	}
+
+	a:hover {
+	  cursor: pointer;
+	  color: var(--ion-color-primary-tint);
+	}
+  }
+}
+
+@media (min-width: $breakpoint-sm-md) {
+  .card {
+	font-size: 1.15em;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .card {
+	font-size: 1.4em;
+  }
+
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .card {
+	font-size: 1em;
+  }
+}
+
+@media (min-width: $breakpoint-tablet-lg) {
+  .card {
+	font-size: 1.3em;
+  }
+}

@@ -1,0 +1,13 @@
+<ion-card class="card"  (click)="displayOptions()">
+  <ion-card-header>
+    <ion-card-title>Trivia for the week!</ion-card-title>
+    <ion-icon name="game-controller-outline"></ion-icon>
+  </ion-card-header>
+  <ion-card-content class='card-content'>
+    <ion-card-title>
+     {{ question }}
+    </ion-card-title>
+  </ion-card-content>
+
+  <ion-card-subtitle class="card-subtitle"><span>{{ numberOfParticipants }} people already participated. </span> &nbsp; Touch to participate!</ion-card-subtitle>
+</ion-card>

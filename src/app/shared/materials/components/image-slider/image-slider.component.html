@@ -1,0 +1,5 @@
+<swiper [navigation]="true" [pagination]="true" effect="fade">
+  <ng-template swiperSlide *ngFor="let url of imageUrls">
+    <ion-img [class]="'banner-image'" [src]="url"></ion-img>
+  </ng-template>
+</swiper>
