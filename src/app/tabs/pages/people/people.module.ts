@@ -8,6 +8,8 @@ import { PeoplePageRoutingModule } from './people-routing.module';
 
 import { PeoplePage } from './people.page';
 import {MaterialsModule} from '../../../shared/materials/materials.module';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import {MaterialsModule} from '../../../shared/materials/materials.module';
     FormsModule,
     IonicModule,
     PeoplePageRoutingModule,
-      MaterialsModule
+      MaterialsModule,
+      InfiniteScrollModule,
+      NgxSpinnerModule
   ],
   declarations: [PeoplePage]
 })

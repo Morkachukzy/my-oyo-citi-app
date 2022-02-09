@@ -8,6 +8,7 @@ import {StatisticsCardModule} from './components/statistics-card/statistics-card
 import {ParticipationPollModule} from './components/participation-poll/participation-poll.module';
 import {RecentIssuesModule} from './components/recent-issues/recent-issues.module';
 import { TriviaModule } from './components/trivia/trivia.module';
+import {CaseModule} from './components/case/case.module';
 
 @NgModule({
     declarations: [],
@@ -20,7 +21,8 @@ import { TriviaModule } from './components/trivia/trivia.module';
         StatisticsCardModule,
         ParticipationPollModule,
         RecentIssuesModule,
-        TriviaModule
+        TriviaModule,
+        CaseModule
     ],
     exports: [
         SwiperModule,
@@ -30,9 +32,9 @@ import { TriviaModule } from './components/trivia/trivia.module';
         StatisticsCardModule,
         ParticipationPollModule,
         RecentIssuesModule,
-        TriviaModule
+        TriviaModule,
+        CaseModule
     ]
 })
 export class MaterialsModule {
-
 }

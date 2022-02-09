@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {IIssues} from '../../../interfaces/issues';
 
 @Component({
     selector: 'app-recent-issues',
@@ -7,11 +8,7 @@ import {Router} from '@angular/router';
     styleUrls: ['./recent-issues.component.scss'],
 })
 export class RecentIssuesComponent implements OnInit {
-    @Input() solvedIssues: any = {
-        title: ``,
-        body: ``,
-        author: ``,
-    };
+    @Input() solvedIssues: Array<IIssues> = [];
 
     constructor(private route: Router) {
     }
@@ -28,8 +25,8 @@ export class RecentIssuesComponent implements OnInit {
         return (issue) => issue.author;
     }
 
-    proceedTo(issue){
-        this.route.navigate(['solved-issue'], { state: { issue } }).then(resp => resp ? console.log('Done') : '');
+    proceedTo(issueId) {
+        this.route.navigate(['solved-issue'], {state: {issueId}}).then(resp => resp ? console.log('Done') : '');
     }
 
     ngOnInit() {

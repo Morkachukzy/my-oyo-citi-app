@@ -1,0 +1,49 @@
+<ion-card class="case-wrapper">
+    <div class="case">
+        <div class="image">
+            <img [src]='caseImageUrl' alt="image">
+        </div>
+        <ion-card-subtitle class="id">case #{{ caseId }} <span *ngIf="hasStatus">({{ caseStatus }})</span>
+        </ion-card-subtitle>
+
+        <ion-card-title class="title">{{ caseTitle }}</ion-card-title>
+        <ion-card-subtitle>{{ caseContent }}</ion-card-subtitle>
+        <div>
+            <div>
+                <ion-card-subtitle>
+                    <ion-icon name="location-outline"></ion-icon>
+                    <span>{{caseLocation}}</span>
+                </ion-card-subtitle>
+                <ion-card-subtitle>
+                    <ion-icon name="receipt-outline"></ion-icon>
+                    <span>{{caseDepartment}}</span>
+                </ion-card-subtitle>
+                <ion-card-subtitle>
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <span>{{caseType}}</span>
+                </ion-card-subtitle>
+                <ion-card-subtitle>
+                    <div>
+                        <ion-icon name="eye-outline"></ion-icon>
+                        <span>{{noOfCaseViews}}</span>
+                    </div>
+                    <div>
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span>{{noOfCaseLikes}}</span>
+                    </div>
+                    <div>
+                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                        <span>{{noOfCaseComments}}</span>
+                    </div>
+                </ion-card-subtitle>
+                <ion-card-subtitle>
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span>{{timeCreated}}</span>
+                </ion-card-subtitle>
+            </div>
+            <ion-card-subtitle>Read More...</ion-card-subtitle>
+        </div>
+
+    </div>
+
+</ion-card>

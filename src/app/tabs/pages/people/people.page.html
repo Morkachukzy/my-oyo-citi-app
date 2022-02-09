@@ -8,6 +8,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-
+<ion-content>
+  <div *ngFor="let _case of cases">
+  <app-case [case]="_case"></app-case>
+  </div>
 </ion-content>

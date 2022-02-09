@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "update": "npm run update:local && npm run restore:local && npm run deploy",
-    "deploy": "git add . && git commit -m 'Added Trivia Of The Week Component' && git push -f origin master",
+    "deploy": "git add . && git commit -m 'Updated Solved Issues Page' && git push -f origin master",
     "update:local": "git stash save && git pull origin master",
     "restore:local": "git stash pop"
   },
@@ -34,6 +34,8 @@
     "jquery": "^3.6.0",
     "mobx": "^6.3.13",
     "mobx-angular": "^4.4.0",
+    "ngx-infinite-scroll": "^10.0.1",
+    "ngx-spinner": "^13.1.1",
     "rxjs": "~6.6.0",
     "swiper": "^8.0.2",
     "tslib": "^2.2.0",
