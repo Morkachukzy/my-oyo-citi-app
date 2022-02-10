@@ -9,6 +9,7 @@ import {ParticipationPollModule} from './components/participation-poll/participa
 import {RecentIssuesModule} from './components/recent-issues/recent-issues.module';
 import { TriviaModule } from './components/trivia/trivia.module';
 import {CaseModule} from './components/case/case.module';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
     declarations: [],
@@ -22,7 +23,8 @@ import {CaseModule} from './components/case/case.module';
         ParticipationPollModule,
         RecentIssuesModule,
         TriviaModule,
-        CaseModule
+        CaseModule,
+        ScrollingModule
     ],
     exports: [
         SwiperModule,
@@ -33,7 +35,8 @@ import {CaseModule} from './components/case/case.module';
         ParticipationPollModule,
         RecentIssuesModule,
         TriviaModule,
-        CaseModule
+        CaseModule,
+        ScrollingModule
     ]
 })
 export class MaterialsModule {

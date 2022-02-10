@@ -1,15 +1,23 @@
 <ion-header collapse="collapse" class="ion-no-border">
-  <ion-toolbar >
-    <ion-buttons slot="start">
-      <ion-back-button text="" defaultHref="/tabs/Home">
-      </ion-back-button>
-    </ion-buttons>
-    <ion-title >People</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" defaultHref="/tabs/Home">
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>People</ion-title>
+    </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  <div *ngFor="let _case of cases">
-  <app-case [case]="_case"></app-case>
-  </div>
+    <div class="cases">
+        <app-case *ngFor="let _case of cases" [case]="_case"></app-case>
+    </div>
+
+    <ion-infinite-scroll threshold="10%" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+                loadingSpinner="dots"
+                loadingText="">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>

@@ -10,7 +10,7 @@ SwiperCore.use([Navigation, Autoplay, Keyboard, Pagination, Scrollbar, Zoom, Eff
 const toggleTheme = () => {
     const toggle: any = document.querySelector('#theme-toggle');
 // Listen for the toggle check/uncheck to toggle the dark class on the <body>
-    toggle.addEventListener('ionChange', (ev) => {
+    toggle?.addEventListener('ionChange', (ev) => {
         document.body.classList.toggle('dark', ev.detail.checked);
         console.log(toggle.checked);
         return toggle.checked;

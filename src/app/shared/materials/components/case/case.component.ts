@@ -34,6 +34,16 @@ export class CaseComponent implements OnInit {
         return this.case.details.image;
     }
 
+    get imageStyle() {
+        return this.hasImage ?
+            `background: lightblue url(${this.caseImageUrl}) center/cover no-repeat;` :
+            `background: lightblue  center/cover no-repeat fixed;`;
+        // `background: lightblue  center/cover no-repeat fixed;`;
+    }
+
+    get hasImage() {
+        return this.case.details.image !== ``;
+    }
     get caseId() {
         return this.case.details.id;
     }

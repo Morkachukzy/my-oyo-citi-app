@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "update": "npm run update:local && npm run restore:local && npm run deploy",
-    "deploy": "git add . && git commit -m 'Updated Solved Issues Page' && git push -f origin master",
+    "deploy": "git add . && git commit -m 'Implemented Infinite Scroll on the People Page' && git push -f origin master",
     "update:local": "git stash save && git pull origin master",
     "restore:local": "git stash pop"
   },
