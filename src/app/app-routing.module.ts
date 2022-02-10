@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'case',
     loadChildren: () => import('./pages/case/case.module').then( m => m.CasePageModule)
   },
+  {
+    path: 'post',
+    loadChildren: () => import('./pages/post/post.module').then( m => m.PostPageModule)
+  },
 ];
 
 @NgModule({

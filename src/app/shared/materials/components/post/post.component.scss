@@ -1,0 +1,95 @@
+
+$borderRadius: 20px;
+
+$acknowledgedColor: blue;
+$pendingColor: yellow;
+$solvedColor: green;
+
+.post-wrapper {
+  padding: 2em;
+  margin: 1.5em 2em;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: $borderRadius;
+
+  .post {
+	.image {
+	  border-radius: $borderRadius;
+	  height: 200px;
+	}
+
+	.id {
+	  font-size: .7em;
+	  margin-top: .5em;
+
+	  .ACKNOWLEDGED {
+		color: $acknowledgedColor;
+	  }
+
+	  .PENDING {
+		color: $pendingColor;
+	  }
+
+	  .SOLVED {
+		color: $solvedColor;
+	  }
+	}
+
+	.title {
+	  font-size: 1em;
+	  margin-top: 0.5em;
+	}
+
+	.content {
+	  text-transform: none;
+	  padding-top: .5em;
+	  //text-overflow: ellipsis;
+	  //overflow: hidden;
+	  //white-space: nowrap;
+	  font-weight: 500;
+	  font-size: .8em;
+	  display: -webkit-box;
+	  -webkit-line-clamp: 3;
+	  -webkit-box-orient: vertical;
+	  overflow: hidden;
+	  text-align: justify;
+	}
+
+	.details-wrapper{
+	  .feedback-wrapper{
+		display: flex;
+		.feedback{
+		  padding: .4em;
+		}
+	  }
+	  .details{
+		font-size: .7em;
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+	  }
+
+	}
+	ion-icon{
+	  padding-right: .5em;
+	}
+	.other-details{
+	  display: flex;
+	  justify-content: space-between;
+	  ion-card-subtitle{
+		text-transform: none;
+		font-size: .7em;
+	  }
+	  .read-more{
+		color: var(--ion-color-primary);
+	  }
+	}
+  }
+}
+//$breakpoint-tablet: 658px;
+//
+//@media (min-width: $breakpoint-tablet) {
+//  .post-wrapper {
+//	height: 100%;
+//  }
+//}

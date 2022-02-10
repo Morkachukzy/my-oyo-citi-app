@@ -1,0 +1,13 @@
+$breakpoint-sm-md: 390px;
+$breakpoint-v-sm: 365px;
+$breakpoint-md: 500px;
+$breakpoint-tablet: 658px;
+$breakpoint-tablet-lg: 890px;
+
+
+@media (min-width: $breakpoint-tablet) {
+  .posts {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+  }
+}

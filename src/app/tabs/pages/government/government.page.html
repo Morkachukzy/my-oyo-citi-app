@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Government</ion-title>
-  </ion-toolbar>
+<ion-header collapse="collapse" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" defaultHref="/tabs/Home">
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>Government</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+    <div class="posts">
+        <app-post *ngFor="let _post of posts" [post]="_post"></app-post>
+    </div>
+
+    <ion-infinite-scroll *ngIf="!isEndOfPage" threshold="10%" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+                loadingSpinner="dots"
+                loadingText="">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>

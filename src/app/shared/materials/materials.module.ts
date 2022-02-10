@@ -10,6 +10,7 @@ import {RecentIssuesModule} from './components/recent-issues/recent-issues.modul
 import { TriviaModule } from './components/trivia/trivia.module';
 import {CaseModule} from './components/case/case.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import {PostModule} from './components/post/post.module';
 
 @NgModule({
     declarations: [],
@@ -24,7 +25,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         RecentIssuesModule,
         TriviaModule,
         CaseModule,
-        ScrollingModule
+        PostModule,
+        ScrollingModule,
     ],
     exports: [
         SwiperModule,
@@ -36,6 +38,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         RecentIssuesModule,
         TriviaModule,
         CaseModule,
+        PostModule,
         ScrollingModule
     ]
 })

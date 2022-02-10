@@ -7,13 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { GovernmentPageRoutingModule } from './government-routing.module';
 
 import { GovernmentPage } from './government.page';
+import {MaterialsModule} from '../../../shared/materials/materials.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GovernmentPageRoutingModule
+    GovernmentPageRoutingModule,
+    MaterialsModule,
   ],
   declarations: [GovernmentPage]
 })
