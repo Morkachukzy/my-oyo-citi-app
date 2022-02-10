@@ -5,7 +5,7 @@
         <ion-icon name="thumbs-up-outline"></ion-icon>
     </ion-card-header>
     <div class="content"  *ngFor="let solvedIssue of solvedIssues" >
-        <div  class="content-item" (click)="proceedTo(solvedIssue.id)">
+        <div  class="content-item" (click)="proceedTo(solvedIssue.details.id)">
             <div class="content-icon">
                 <ion-icon name="checkmark-done-circle-outline" color="primary"></ion-icon>
             </div>

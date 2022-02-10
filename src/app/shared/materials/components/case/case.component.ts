@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ICase} from '../../../interfaces/case';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-case',
@@ -27,7 +28,7 @@ export class CaseComponent implements OnInit {
         status: ``,
     };
 
-    constructor() {
+    constructor(private route: Router) {
     }
 
     get caseImageUrl() {
@@ -44,6 +45,7 @@ export class CaseComponent implements OnInit {
     get hasImage() {
         return this.case.details.image !== ``;
     }
+
     get caseId() {
         return this.case.details.id;
     }
@@ -98,8 +100,8 @@ export class CaseComponent implements OnInit {
     }
 
 
-    proceedTo() {
-
+    proceedTo(caseId) {
+        this.route.navigate(['case'], {state: {caseId}}).then(resp => resp ? console.log('Done') : '');
     }
 
 }

@@ -14,10 +14,13 @@
         <app-case *ngFor="let _case of cases" [case]="_case"></app-case>
     </div>
 
-    <ion-infinite-scroll threshold="10%" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll *ngIf="!isEndOfPage" threshold="10%" (ionInfinite)="loadData($event)">
         <ion-infinite-scroll-content
                 loadingSpinner="dots"
                 loadingText="">
         </ion-infinite-scroll-content>
     </ion-infinite-scroll>
+<!--    <ng-template #isAtEndOfPage>-->
+<!--    <ion-text class="end-of-page" >You have reached the end!</ion-text>-->
+<!--    </ng-template>-->
 </ion-content>

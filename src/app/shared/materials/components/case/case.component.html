@@ -1,9 +1,10 @@
-<ion-card class="case-wrapper">
+<ion-card class="case-wrapper" (click)="proceedTo(caseId)">
     <div class="case">
         <div class="image" *ngIf="hasImage" [style]="imageStyle">
 
         </div>
-        <ion-card-subtitle class="id">case #{{ caseId }} <span *ngIf="hasStatus">( <span [class]="caseStatus">{{ caseStatus }}</span> )</span>
+        <ion-card-subtitle class="id">case #{{ caseId }} <span *ngIf="hasStatus">( <span
+                [class]="caseStatus">{{ caseStatus }}</span> )</span>
         </ion-card-subtitle>
 
         <ion-card-title class="title">{{ caseTitle }}</ion-card-title>
@@ -45,9 +46,6 @@
                 </ion-card-subtitle>
                 <ion-card-subtitle class="read-more">Read More...</ion-card-subtitle>
             </div>
-
         </div>
-
     </div>
-
 </ion-card>

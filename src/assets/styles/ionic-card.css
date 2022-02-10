@@ -1,0 +1,8 @@
+:root{
+  --box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px -5px;
+}
+
+ion-card {
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+}

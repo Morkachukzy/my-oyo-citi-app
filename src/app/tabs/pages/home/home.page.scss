@@ -3,7 +3,6 @@
 $background: white;
 $secondary: #3dc2ff;
 $primary: #3880ff;
-$boxShadow: rgb(0 0 0 / 20%) 0px 0px 10px -5px; //TODO- remove and globally theme
 
 ion-avatar {
   border: 1px solid black;
@@ -19,15 +18,7 @@ ion-content {
 
 $primary: var(--primary-color);
 $secondary: var(--secondary-color);
-ion-content, ion-header, ion-tabs {
-  //--ion-background-color: white; //TODO: ion-background-color
-}
 
-ion-card {
-  box-shadow: $boxShadow;
-  border-radius: 20px;
-
-}
 
 ion-row {
   margin: 2em;

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {IIssues} from '../../../interfaces/issues';
+import {ICase} from '../../../interfaces/case';
 
 @Component({
     selector: 'app-recent-issues',
@@ -8,28 +8,29 @@ import {IIssues} from '../../../interfaces/issues';
     styleUrls: ['./recent-issues.component.scss'],
 })
 export class RecentIssuesComponent implements OnInit {
-    @Input() solvedIssues: Array<IIssues> = [];
+    @Input() solvedIssues: Array<ICase> = [];
 
     constructor(private route: Router) {
     }
 
     get title() {
-        return (issue) => issue.title;
+        return (issue) => issue.details.title;
     }
 
     get content() {
-        return (issue) => issue.body;
+        return (issue) => issue.details.body;
     }
 
     get author() {
-        return (issue) => issue.author;
+        return (issue) => issue.details.author;
     }
 
-    proceedTo(issueId) {
-        this.route.navigate(['solved-issue'], {state: {issueId}}).then(resp => resp ? console.log('Done') : '');
+    proceedTo(caseId) {
+        this.route.navigate(['case'], {state: {caseId}}).then(resp => resp ? console.log('Done') : '');
     }
 
     ngOnInit() {
+        console.log(this.solvedIssues);
     }
 
 }

@@ -19,8 +19,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/poll/poll.module').then( m => m.PollPageModule)
   },
   {
-    path: 'solved-issue',
-    loadChildren: () => import('./pages/solved-issue/solved-issue.module').then( m => m.SolvedIssuePageModule)
+    path: 'case',
+    loadChildren: () => import('./pages/case/case.module').then( m => m.CasePageModule)
   },
 ];
 
